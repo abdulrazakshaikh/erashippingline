@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/faviconx.ico">
+  <title>Bootstrap Latest Pre Setup</title>
+
+<!-- STYLESHEET -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- <div class="h-100vh w-100vw d-flex align-items-center justify-content-center">
+  <div class="text-center">
+    <i class="bi-bootstrap display-3 text-dark"></i>
+    <h1 class=" text-dark">
+      <span class="display-5">Welcome to the world of </span>
+      <br> 
+      <span class="display-1">BOOTSTRAP!</span>
+    </h1>
+    <h6>Version : 5.2.1 Beta 1</h6>
+  </div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-top navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.png" class="img-fluid" alt="">
+    </a>  
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-lg-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="img/banner1.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-flex text-white">
+        <h5 class="display-4 fw-bold">First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="img/banner2.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-flex text-white">
+        <h5 class="display-4 fw-bold">Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/banner3.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-flex text-white">
+        <h5 class="display-4 fw-bold">Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section class="section bg-white">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-12 col-md-6 order-1 order-lg-0">
+        <span class="badge rounded-pill text-bg-light section-subtitle mb-3">About us</span>
+        <h2 class="section-title">Big Lorem Ipsum About the company</h2>
+        <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, dolores, id laboriosam dolorem voluptatem ullam necessitatibus aut delectus nesciunt. Ratione repudiandae impedit reiciendis iure a fugit, inventore commodi nulla hic. ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis inventore cupiditate ex sapiente totam? Voluptas magnam quo sint mollitia facere deserunt laborum error, quod ab nihil inventore earum recusandae repellat?</p>
+        <a class="btn btn-link p-0" href="#" target="_self">Learn more</a>
+      </div>
+      <div class="col-12 col-md-6 order-0 order-lg-1">
+        <figure class="figure rounded-4 overflow-hidden shadow">
+          <img src="img/about-img.jpeg" class="figure-img img-fluid m-0" alt="...">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-gray-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <span class="badge rounded-pill text-bg-dark section-subtitle mb-3">Our Services</span>
+        <h2 class="section-title">The Best services in the industry</h2>  
+      </div>
+    </div>
+    <div class="row g-4 my-3">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-case rounded-4 bg-white shadow overflow-hidden position-relative">
+          <div class="service-case-image">
+            <img loading="lazy" src="https://runwebrun.com/startbox/assets/img/service-case-1-740x480.jpg" alt="" />
+          </div>
+          <div class="service-case-body">
+            <h4 class="service-case-title mb-15">Lorem One Service</h4>
+            <p class="service-case-text">Beast whose. You"ll may fruit don"t deep abundantly own void.</p>
+            <a class="service-case-arrow stretched-link" href="service-single.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+              <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-case rounded-4 bg-white shadow overflow-hidden position-relative">
+          <div class="service-case-image">
+            <img loading="lazy" src="https://runwebrun.com/startbox/assets/img/service-case-1-740x480.jpg" alt="" />
+          </div>
+          <div class="service-case-body position-relative">
+            <h4 class="service-case-title mb-15">Lorem Two Service</h4>
+            <p class="service-case-text">Beast whose. You"ll may fruit don"t deep abundantly own void.</p>
+            <a class="service-case-arrow stretched-link" href="service-single.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+              <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-case rounded-4 bg-white shadow overflow-hidden position-relative">
+          <div class="service-case-image">
+            <img loading="lazy" src="https://runwebrun.com/startbox/assets/img/service-case-1-740x480.jpg" alt="" />
+          </div>
+          <div class="service-case-body position-relative">
+            <h4 class="service-case-title mb-15">Lorem Three Service</h4>
+            <p class="service-case-text">Beast whose. You"ll may fruit don"t deep abundantly own void.</p>
+            <a class="service-case-arrow stretched-link" href="service-single.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+              <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-case rounded-4 bg-white shadow overflow-hidden position-relative">
+          <div class="service-case-image">
+            <img loading="lazy" src="https://runwebrun.com/startbox/assets/img/service-case-1-740x480.jpg" alt="" />
+          </div>
+          <div class="service-case-body position-relative">
+            <h4 class="service-case-title mb-15">Lorem Four Service</h4>
+            <p class="service-case-text">Beast whose. You"ll may fruit don"t deep abundantly own void.</p>
+            <a class="service-case-arrow stretched-link" href="service-single.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+              <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-case rounded-4 bg-white shadow overflow-hidden position-relative">
+          <div class="service-case-image">
+            <img loading="lazy" src="https://runwebrun.com/startbox/assets/img/service-case-1-740x480.jpg" alt="" />
+          </div>
+          <div class="service-case-body position-relative">
+            <h4 class="service-case-title mb-15">Lorem Five Service</h4>
+            <p class="service-case-text">Beast whose. You"ll may fruit don"t deep abundantly own void.</p>
+            <a class="service-case-arrow stretched-link" href="service-single.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+              <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-case rounded-4 bg-white shadow overflow-hidden position-relative">
+          <div class="service-case-image">
+            <img loading="lazy" src="https://runwebrun.com/startbox/assets/img/service-case-1-740x480.jpg" alt="" />
+          </div>
+          <div class="service-case-body position-relative">
+            <h4 class="service-case-title mb-15">Lorem Six Service</h4>
+            <p class="service-case-text">Beast whose. You"ll may fruit don"t deep abundantly own void.</p>
+            <a class="service-case-arrow stretched-link" href="service-single.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+              <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-section position-relative">
+    <div class="container card cta-card rounded-4 overflow-hidden">
+      <div class="card-body">
+          <div class="cta-inner">
+              <h3 class="cta-title">Want to get a <br />free consultation?</h3>
+              <a class="btn btn-cta" href="#">Get in Touch</a>
+          </div>
+      </div>
+    </div>
+</section>
+
+<footer class="footer bg-dark">
+  <div class="container">
+    <ul class="nav justify-content-center border-bottom border-light border-opacity-10 pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link link-light">Home</a></li>
+      <li class="text-white d-flex align-items-center">|</li>
+      <li class="nav-item"><a href="#" class="nav-link link-light">About</a></li>
+      <li class="text-white d-flex align-items-center">|</li>
+      <li class="nav-item"><a href="#" class="nav-link link-light">Services</a></li>
+      <li class="text-white d-flex align-items-center">|</li>
+      <li class="nav-item"><a href="#" class="nav-link link-light">Contact</a></li>
+    </ul>
+    <p class="text-center text-light">© 2022 Company, Inc</p>
+    
+  <!-- <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+      <small class="d-block mb-3 text-muted">© 2017–2022</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-light" href="#">About</a></li>
+        <li><a class="link-light" href="#">Services</a></li>
+        <li><a class="link-light" href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Services</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-light" href="#">Service 1</a></li>
+        <li><a class="link-light" href="#">Service 2</a></li>
+        <li><a class="link-light" href="#">Service 3</a></li>
+        <li><a class="link-light" href="#">Service 4</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Contact</h5>
+      <ul class="nav flex-column nav-opacity nav-gap-sm">
+          <li class="nav-item">
+            <a class="nav-link link-light" href="tel:12023580309">+1 202-358-0309</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="mailto:hello@startbox.com">hello@startbox.com</a>
+          </li>
+      </ul>
+    </div>
+  </div> -->
+  </div>
+</footer>
+<!-- SCRIPT -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
