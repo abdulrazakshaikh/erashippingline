@@ -59,10 +59,46 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   width: 100%;
   min-height: var(--navbar-height);
   padding:  0px;
+  display: flex;
+  flex-direction: column;
   /*box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);*/
 }
+.navbar-top .topbar{
+  background: #fafafa;
+  min-height:  30px;
+}
+.navbar-top .topbar .topbar-nav{
+  list-style: none; 
+  display:  flex;
+  align-items:  center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  height:  100%;
+}
+.navbar-top .topbar .topbar-nav .nav-item{}
+.navbar-top .topbar .topbar-nav .nav-item .nav-link{
+    padding: 0.125rem 1rem;
+    display: flex;
+    align-items: center;
+}
+.navbar-top .topbar .topbar-nav .nav-item .nav-link i{
+  color: var(--primary-color);
+  border-radius: 4px;
+  padding: 0.125rem .25rem;
+}
+.navbar-top .topbar .topbar-nav .nav-item .nav-link .nav-link-text{
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size:  0.85rem;
+}
+
 .navbar-top .navbar-brand{
-    height: 54px;
+  height: 54px;
+  transition: .2s ease-in-out transform;
+}
+.navbar-top .navbar-brand:hover{
+  transform: rotate(-5deg) scale(1.1);
 }
 .navbar-top .navbar-brand img{
 	width: 100%;
@@ -100,6 +136,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 	font-weight: bold;
   color: var(--primary-color);
 }
+@media screen and (min-width: 991px){
 .navbar-top .navbar-nav .nav-item .nav-link.active:after,
 .navbar-top .navbar-nav .nav-item .nav-link:hover:after{
 	content: '';
@@ -111,7 +148,74 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   left: 0;
   border-radius: 4px;
 }
+.navbar-top .topbar .topbar-nav .h-divider{
+    display: flex;
+    align-items:  center;
+    color: var(--bs-gray-400);
+  }
+}
+@media screen and (max-width: 990px){
+  .navbar-top .offcanvas-header{
+    background-color: #fafafa;
+    height: var(--navbar-height);
+    padding: .85rem;
+    border-bottom:  1px solid #eaeaea;
+  }
+  .navbar-top .offcanvas-header .btn-close{
+    background: none;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .navbar-top .offcanvas-header .btn-close i{
+    color:  var(--bs-red);
+    font-size:  1.5rem;
+  }
+  .navbar-top .offcanvas-body{
+    padding: 0;
+  }
+  .navbar-top .navbar-nav{
+    margin: 1rem 0;
+  }
+  .navbar-top .navbar-nav .nav-item .nav-link{
+    height:  54px;
+    padding: .85rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-top .navbar-nav .nav-item .nav-link:after{
+    content: '\F285';
+    font-family: var(--primaryiconfont);
+  }
+  .navbar-top .navbar-nav .nav-item .nav-link:hover{
+    background-color: rgba(var(--primaryrgb-color), 0.05);
+  }
+  .navbar-top .navbar-nav .nav-item:not(:last-child){
+    border-bottom:  1px solid #eaeaea;
+  }
+}
 
+@media screen and (max-width: 576px){
+  .navbar-top .topbar .topbar-nav{
+    flex-direction:  column;
+    align-items: flex-start;
+  }
+  .navbar-top .topbar .topbar-nav .h-divider{
+    display: none;
+  }
+  .navbar-top .topbar .topbar-nav .nav-item .nav-link{
+    padding: .125rem .35rem;
+    flex:  1;
+    width: 100%;
+  }
+  .navbar-top .topbar .topbar-nav .nav-item .nav-link i{
+    margin-right: .5rem;
+  }
+
+}
 /*================================= / NAVBAR ==================================*/
 /*================================= BANNER ==================================*/
 
@@ -133,18 +237,26 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 	object-fit: cover;
 }
 .carousel-caption {
-  bottom: 3rem;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   flex-direction: column;
+} 
+.carousel-caption .caption-desc{
+  font-size:  1.15rem;
+  font-weight: 500;
 }
 .carousel-item {
-  height: 32rem;
+  height: 28rem;
 }
 
+@media screen and (max-width: 990px){
+.carousel-item {
+  height: 24rem;
+}  
+}
 /*================================= / BANNER ==================================*/
 /*================================= SECTION =================================*/
 .section{
@@ -162,6 +274,39 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
     font-size: 0.7em;
     padding:  .25rem .75rem;
     font-weight: bold;
+}
+.headsection{
+  position: relative;
+  height: 220px;
+  display: flex;
+  align-items: center;
+}
+.headsection:after{
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom:  0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.headsection .headsection-title{
+  z-index:  99;
+  color: #ffffff;
+  position:  relative;
+  font-size: 2.5rem;
+  margin: 0px;
+  letter-spacing: var(--letterspacing-medium);
+}
+.services-img{
+  background:  url('../img/banner1.jpeg') no-repeat center center / cover;
+  background-attachment: fixed;
+}
+.contact-img{
+  background:  url('../img/contact-img.jpeg') no-repeat center bottom / cover;
+  background-attachment: fixed;
 }
 .btn-link {
     position: relative;
@@ -265,6 +410,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 	position: absolute;
 	left:  0;
 	right: 0;
+  margin: auto;
 	width: 100%;
 	top: calc(var(--cta-height) / 2 - var(--cta-height));
 	min-height: var(--cta-height);
@@ -297,7 +443,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   border-radius: 50rem;
   transition: all 150ms linear;
 }
-.btn-cta:hover{
+.btn-cta:hover, .btn-cta:focus{
 	color: #17161A;
   background-color: #ffb21f;
   -webkit-transform: translateY(-2px);
@@ -310,19 +456,70 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 	height: 100%;
 	object-fit: cover;
 }
-
-/*================================= / SECTION =================================*/
-
-/*================================= FOOTER ==================================*/
-.footer{
-	padding-top: calc(var(--cta-height) / 2 + 30px);
-	padding-bottom: 30px;
+.contact-card{}
+.contact-card .contact-card-body{
+  padding: 20px;
 }
-.footer .nav .nav-item .nav-link:hover{
-	text-decoration:  underline;
+.contact-card .contact-card-head{
+  padding: 20px 10px;
+  border-bottom:  1px solid #eaeaea;
 }
-/*================================= / FOOTER ==================================*/
+.contact-card .contact-card-head .chead-title{
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin: 0;
+}
+.contact-list{
+  list-style:  none;
+  padding: 0px;
+  gap: .5rem;
+  display: grid;
+}
+.contact-list .contact-list-item{
+  display:  flex;
+  align-items: flex-start;
+}
+.contact-list .contact-list-item i{
+  margin-right: .5rem;
+  color:  var(--primary-color);
+  background-color: rgba(var(--primaryrgb-color), .1);
+  border-radius:  4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-list .contact-list-item .c-text{
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex:  1;
+  margin: 0;
+}
 
+.form-group{}
+.form-group .form-control{
+  box-shadow: none;
+  padding: .65rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.form-group .form-control::placeholder{
+  color: #9c9c9c;
+  font-size: 0.85rem;
+  letter-spacing: .1rem;
+}
+.form-group .input-group .input-group-text{
+  background-color:  #ffffff;
+}
+.form-group .input-group:focus-within .input-group-text,
+.form-group .form-control:focus{
+  border-color: var(--primary-color);
+}
+.form-group .input-group:focus-within .input-group-text{
+  color: var(--primary-color);
+}
 @media screen and (max-width:  768px){
 	.section{
 		padding: 50px 0;
@@ -336,7 +533,21 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 		margin:  0 10px;
 		width:  calc(100% - 20px) !important;
 	}
-	.footer{
-		padding-top:  150px !important;
-	}
 }
+/*================================= / SECTION =================================*/
+
+/*================================= FOOTER ==================================*/
+.footer{
+	padding-top: calc(var(--cta-height) / 2 + 30px);
+	padding-bottom: 30px;
+}
+.footer .nav .nav-item .nav-link:hover{
+	text-decoration:  underline;
+}
+@media screen and (max-width:  768px){
+  .footer{
+    padding-top:  150px !important;
+  }
+}
+
+/*================================= / FOOTER ==================================*/
