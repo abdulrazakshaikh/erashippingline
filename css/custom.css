@@ -306,12 +306,37 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   margin: 0px;
   letter-spacing: var(--letterspacing-medium);
 }
+
+.about-img{
+  background:  url('../img/about-banner.jpeg') no-repeat center center / cover;
+  background-attachment: fixed;
+}
 .services-img{
-  background:  url('../img/banner1.jpeg') no-repeat center center / cover;
+  background:  url('../img/services-banner.jpeg') no-repeat center center / cover;
   background-attachment: fixed;
 }
 .contact-img{
-  background:  url('../img/contact-img.jpeg') no-repeat center bottom / cover;
+  background:  url('../img/contact-banner.jpeg') no-repeat center bottom / cover;
+  background-attachment: fixed;
+}
+
+.emptyyard-img{
+  background:  url('../img/empty-yard.jpeg') no-repeat center top / cover;
+  background-attachment: fixed;
+}
+
+.containersale-img{
+  background:  url('../img/container-sale.jpeg') no-repeat center top / cover;
+  background-attachment: fixed;
+}
+
+.portacabin-img{
+  background:  url('../img/porta-cabin.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+.transportation-img{
+  background:  url('../img/transportation.jpeg') no-repeat center top / cover;
   background-attachment: fixed;
 }
 .btn-link {
